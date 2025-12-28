@@ -1,0 +1,77 @@
+@use "../base/variables" as v;
+
+.hero {
+    background: v.$gradient-hero;
+    border: none;
+    text-align: center;
+
+    padding: 2rem;
+    margin-top: 2rem;
+
+    h1 {
+        margin-bottom: 2.5rem;
+
+        @include v.tablet {
+            font-size: 5rem;
+        }
+    }
+
+    span {
+        color: v.$primary;
+    }
+
+    p {
+        @include v.tablet {
+            padding: 0 5rem;
+        }
+
+        font-size: 1.3rem;
+ 
+        @include v.tablet {
+            text-align: justify;
+        }
+
+    }
+
+    h2 {
+        color: v.$text-muted;
+        font-size: 0.8rem;
+    }
+}
+
+.opciones {
+    @include v.tablet {
+        display: flex;
+    }
+
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+
+    .cv {
+        @include v.botones(#001c58, block);
+        border-radius: 9%;
+        margin: 1rem;
+
+        @include v.tablet {
+            margin: 0;
+        }
+
+        i {
+            color: rgb(0 180 216 / var(--tw-text-opacity, 1));
+        }
+
+        a {
+            text-decoration: none;
+            color: v.$primary;
+        }
+    }
+
+    .ir_proyecto {
+        @include v.botones(#001c58f1, block);
+        border-radius: 9%;
+        color: v.$primary;
+        text-decoration: none;
+    }
+
+}

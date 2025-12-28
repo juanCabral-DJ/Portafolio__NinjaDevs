@@ -1,0 +1,164 @@
+/* ==============================
+   🎨 COLORES BASE
+================================ */
+
+$bg-main: #152548;        // Fondo general
+$bg-secondary: #020617;  // Cards, header, footer
+$bg-tertiary: #020617cc; // Overlays / blur
+
+$primary: #38bdf8;       // Color principal (links, spans, acentos)
+$secondary: #24a5c5de;     // CTA, botones importantes
+$danger: #ef4444;
+$warning: #f59e0b;
+
+/* ==============================
+   📝 TEXTO
+================================ */
+
+$text-main: #e5e7eb;     // Texto principal
+$text-muted: #94a3b8;    // Texto secundario
+$text-light: #ffffff;
+$text-dark: #020617;
+
+//Border
+$border: #1e293b;
+$border-light: #334155;
+
+//tipografia
+$font-main: 'Inter', system-ui, -apple-system, sans-serif;
+$font-mono: 'JetBrains Mono', monospace;
+
+//gradient
+$gradient-primary: linear-gradient(
+  135deg,
+  #06196e 0%,
+  #0c1b3f 100%,
+);
+
+$gradient-second: linear-gradient(
+  135deg,
+  #0c1b3f 0%,
+  #041975 100%,
+);
+
+$gradient-thrid: linear-gradient(
+  135deg,
+  #031643 0%,
+  #041975 50%,
+  #0c1e71 100%,
+);
+
+$gradient-art: linear-gradient(
+  135deg,
+  #0c1b3f 0%,
+  #041975 50%,
+  #06196e 100%
+);
+
+$gradient-proyecto: linear-gradient(
+  135deg,
+  #040755 0%,
+  #0b1a5e 50%,
+  #06086e 100%
+);
+
+$gradient-fin: linear-gradient(
+  135deg,
+  #05097b 0%,
+  #04124e 50%,
+  #06086e 100%
+);
+
+section{
+ scroll-margin-top: 100px;
+}
+
+$gradient-hero: linear-gradient(
+  135deg,
+  #06196e 0%,
+  #0c1b3f 50%,
+  #041975 100%
+);
+
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 10px 30px rgba(0, 0, 0, 0.45);
+$shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+
+    span{
+        color: $primary;
+    }
+
+@mixin primary-button {
+  background-color: $primary-color;
+  color: $text-title;
+  border: none;
+  font-weight: bold;
+  
+  &:hover {
+    background-color: lighten($primary-color, 5%);
+    cursor: pointer;
+  }
+}
+
+// Ejemplo de uso para el botón secundario (Descargar CV)
+@mixin outline-button {
+  background-color: transparent;
+  border: 2px solid $primary-border;
+  color: $primary-color;
+  
+  &:hover {
+    background-color: rgba($primary-color, 0.1);
+  }
+}
+
+$telefono: 400px;
+$tablet: 769px;
+$desktop: 1200px;
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: #{$telefono}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin botones($color, $display){
+    background-color: $color;
+    color: #ffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 5 / 2;
+    display: $display;
+    border: none;
+
+    &:hover{
+        background-color: darken($color,5);
+        cursor: pointer;
+    }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}

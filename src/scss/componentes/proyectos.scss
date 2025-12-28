@@ -1,0 +1,72 @@
+@use "../base/variables" as v;
+
+.proyectos{
+    background: v.$gradient-thrid;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+.info_proyectos{
+    text-align: center;
+    @include v.tablet{
+       h1{
+        font-size: 3rem;
+       } 
+    }
+}
+.proyecto{
+    display: block;
+    @include v.tablet {
+    display: flex;
+    }
+    background: v.$gradient-proyecto;
+    margin: 1rem;
+    @include v.tablet {
+        margin: 2.5rem;
+    }
+
+    padding: 1rem;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); 
+    transition: transform 0.3s ease-in-out box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+
+        z-index: 2;
+
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    img{
+        max-width: 10rem; 
+        margin: 1rem;
+
+        @include v.telefono{
+           max-width: 30rem;  
+        }
+    }
+
+    p{
+        text-align: justify;
+    }
+}
+
+.img{ 
+      @include v.tablet {
+    margin-top: 2rem;
+      }
+}
+
+.info{
+    margin: 2rem;
+}
+
+.ir_repo{
+    @include v.botones(#001c58f1, block);
+        border-radius: 10%;
+        color: v.$secondary;
+        text-decoration: none;
+        margin-top: 1rem;
+        max-width: 8rem;
+}

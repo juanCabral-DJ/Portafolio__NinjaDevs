@@ -1,0 +1,130 @@
+@use "../base/variables" as v;
+
+.contacto {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background: v.$gradient-fin;
+
+    @include v.tablet {
+        h1 {
+            font-size: 3rem;
+        }
+
+        .contactos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 1rem;
+        }
+    }
+}
+
+.contactos {
+    margin: 1rem;
+}
+
+.contacto__links {
+    padding: 1rem;
+    background: v.$gradient-hero;
+    margin: 1rem 0;
+
+    @include v.tablet{
+        margin: 0;
+    }
+
+    .linked {
+        padding: 1rem;
+        text-align: left;
+        display: flex;
+        align-items: left; 
+        flex-direction: row; 
+        @include v.telefono {
+            flex-direction: row;
+            padding: 3rem;
+            align-items: center;
+        }
+        
+        text-decoration: none;
+        font-size: 0.5rem;
+
+        @include v.telefono {
+            font-size: 1rem;
+        }
+
+        margin: 6rem 2rem;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+
+        }
+
+        p {
+            margin: 0.5rem 0;
+        }
+
+        i { 
+            padding: 1rem 0;
+            font-size: 1rem;
+        }
+
+        @include v.telefono {
+            i {
+                padding: 0;
+                font-size: 4rem;
+
+            }
+        }
+
+        .text_link {
+            margin: 0 1rem;
+            color: #ffff;
+            text-align: left;
+        }
+    }
+}
+
+.contacto__form {
+    padding: 1rem;
+    background: v.$gradient-hero;
+
+
+
+    .form {
+        padding: 1rem;
+
+
+        input:not([type="submit"]),
+        textarea,
+        select {
+            padding: .5rem;
+            display: block;
+            width: 100%;
+            background-color: #ffff;
+            border: 1px solid #ffffff84;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    textarea {
+        height: 20rem;
+    }
+
+    button {
+        @include v.botones(#001c58f1, block);
+        border-radius: 10%;
+        color: v.$primary;
+    }
+
+}
+
+.contacto__info {
+    label {
+        margin: 1rem 0;
+    }
+}

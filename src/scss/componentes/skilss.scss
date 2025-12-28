@@ -1,0 +1,155 @@
+@use "../base/variables" as v;
+
+.skills {
+    background: v.$gradient-second;
+    
+    @include v.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+    gap: 16px;
+    margin-top: 2rem;
+    padding: 2rem;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+}
+
+li {
+    padding: 1rem;
+}
+
+.skills__text {
+    max-height: 40rem;
+    margin: 1rem;
+    @include v.tablet {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.skills__tecnologias1 {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: v.$gradient-art;
+    padding: 2rem;
+    margin: 1rem;
+    transition: transform 0.3s ease-in-out box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+
+        z-index: 2;
+
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.skills__tecnologias2 {
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: v.$gradient-art;
+
+    transition: transform 0.3s ease-in-out box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+
+        z-index: 2;
+
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.skills__tecnologias3 {
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: v.$gradient-art;
+
+    transition: transform 0.3s ease-in-out box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+
+        z-index: 2;
+
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.skills__tecnologias4 {
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: v.$gradient-art;
+
+    transition: transform 0.3s ease-in-out box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+
+        z-index: 2;
+
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+    }
+}
+
+//Colores iconos
+.powerbi{
+     color: #0bc8c2e2;
+}
+.excel{
+     color: #08c033e2;
+}
+.sql{
+    color: #d9be10d1;
+}
+.py{
+    color: #058194dc;
+}
+.css{
+     color: #1db5fbe2;
+}
+.js{
+    color: #eacd12f6;
+}
+.boos{
+    color: #980cd0d0;
+}
+.svelte{
+    color: #cd740f;
+}
+.java{
+    color: #d56119d0;
+}
+.php{
+    color: #1366afb3;
+}
+.net{
+    color: #790799f6;
+}
+.node{
+    color: #eacd12f6;
+} 
+.jira{
+    color: #12d4eaf6;
+}
+.git{
+    color: #9428a9cb;
+}
+.azure{
+    color: #137cd2f6;
+}

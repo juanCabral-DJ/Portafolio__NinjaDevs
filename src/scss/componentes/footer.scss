@@ -1,0 +1,40 @@
+@use "../base/variables" as v;
+
+.footer {
+    padding: 2rem 0 0 0;
+    text-align: center;
+
+    .footer__info {
+        @include v.telefono {
+            display: flex;
+        }
+
+        justify-content: space-around;
+    }
+
+    .info {
+        text-align: left;
+
+    }
+
+    .contactos {
+        padding: 2rem;
+
+        a {
+            display: flex;
+
+            i {
+                padding-top: 1rem;
+                padding-right: 1rem;
+            }
+
+
+            p { 
+                color: #ffff;
+            }
+
+            text-decoration: none;
+        }
+
+    }
+}

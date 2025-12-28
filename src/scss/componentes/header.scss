@@ -1,0 +1,66 @@
+@use "../base/variables" as v;
+
+body {
+    background: v.$gradient-hero;
+    color: v.$text-main;
+    width: 100%;
+    font-family: v.$font-main;
+}
+
+.header {
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+
+    @include v.tablet {
+        display: flex;
+    }
+
+    border-bottom: 2px solid v.$border;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.header--scroll {
+    background: v.$gradient-hero;
+    backdrop-filter: blur(12px);
+    opacity: 1;
+}
+
+.logo_name {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+
+    a {
+        opacity: 0.4;
+        color: v.$text-light;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 3rem;
+        padding: 1rem;
+        font-weight: bold;
+    }
+}
+
+.navegacion {
+    padding: 2rem 1rem;
+
+    a {
+        text-decoration: none;
+        color: v.$text-main;
+        font-size: 1.5rem;
+        padding: 0 0.5rem;
+        font-weight: bold;
+        transition: font-size 0.3s ease-in-out;
+    }
+
+    a:hover {
+        color: lighten(v.$primary, 3);
+        cursor: pointer;
+        font-size: 1.7rem;
+    }
+}
